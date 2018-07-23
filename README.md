@@ -17,3 +17,5 @@ Run the app in the command line using node and give it one of four commands:
  - do-what-it-says (ex. node liri.js do-what-it-says)
      - This command reads a file called random.txt and performs one of the previous three commands based on what is written in the text file.
      - Currently, this command will read random.txt and then execute a spotify-this-song command for the track titled "Whistleblower"
+
+View the GitHub repository at https://github.com/Samuel-Hall/liri-node-app.
