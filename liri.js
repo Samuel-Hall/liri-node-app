@@ -46,7 +46,13 @@ function spotifyThisSong() {
         spotify
         .request('https://api.spotify.com/v1/search?q=artist:ace+of+base&type=track')
         .then(function(data) {
-            console.log(`Track name: ${data.tracks.items[0].name}\nArtist(s): ${data.tracks.items[0].artists[0].name}\nAlbum: ${data.tracks.items[0].album.name}\nPreview: ${data.tracks.items[0].preview_url}`) 
+            for (var l = 0; l < 20; l++) {
+                if (data.tracks.items[l].name == "The Sign") {
+                    console.log(`Track name: ${data.tracks.items[0].name}\nArtist(s): ${data.tracks.items[0].artists[0].name}\nAlbum: ${data.tracks.items[0].album.name}\nPreview: ${data.tracks.items[0].preview_url}`)
+                    break
+                }
+            }
+            // console.log(data.tracks.items[0].name); 
         })
         .catch(function(err) {
         console.error('Error occurred: ' + err); 
